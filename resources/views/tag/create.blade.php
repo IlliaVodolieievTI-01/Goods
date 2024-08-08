@@ -7,10 +7,10 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Create category</h1>
+                        <h1 class="m-0">Create tag</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
-                        <form action="{{route('category.store')}}" method="post">
+                        <form action="{{route('tag.store')}}" method="post">
                             @csrf
                             <div class="form-group">
                                 <br><input type="text" name="title" class="form-control" placeholder="Name">
