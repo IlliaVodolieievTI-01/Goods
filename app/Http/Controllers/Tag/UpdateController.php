@@ -13,6 +13,6 @@ class UpdateController extends Controller
     {
         $data = $request->validated();
         $tag->update($data);
-        return view('tag.show', ['category' => $tag]);
+        return view('tag.show', ['tag' => $tag]);
     }
 }
