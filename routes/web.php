@@ -54,3 +54,13 @@ Route::group(['prefix' => '/users'], function () {
     Route::post('/', \App\Http\Controllers\User\StoreController::class)->name('user.store');
     Route::patch('/{user}', \App\Http\Controllers\User\UpdateController::class)->name('user.update');
 });
+
+Route::group(['prefix' => '/products'], function () {
+    Route::get('/', \App\Http\Controllers\Product\IndexController::class)->name('product.index');
+    Route::get('/create', \App\Http\Controllers\Product\CreateController::class)->name('product.create');
+    Route::delete('/{product}', \App\Http\Controllers\Product\DeleteController::class)->name('product.delete');
+    Route::get('/{product}/edit', \App\Http\Controllers\Product\EditController::class)->name('product.edit');
+    Route::get('/{product}', \App\Http\Controllers\Product\ShowController::class)->name('product.show');
+    Route::post('/', \App\Http\Controllers\Product\StoreController::class)->name('product.store');
+    Route::patch('/{product}', \App\Http\Controllers\Product\UpdateController::class)->name('product.update');
+});
